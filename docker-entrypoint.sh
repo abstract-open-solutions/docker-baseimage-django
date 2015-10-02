@@ -1,8 +1,6 @@
 #!/bin/bash
 set -e
 
-source check_up.bash
-
 if [ -f ./entrypoint-pre.sh ]; then
     ./entrypoint-pre.sh
 fi
