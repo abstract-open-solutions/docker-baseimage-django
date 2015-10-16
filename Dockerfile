@@ -2,8 +2,10 @@ FROM abstracttechnology/webapp:latest
 MAINTAINER Simone Deponti <simone.deponti@abstract.it>
 
 RUN \
+    apt-get update && \
     apt-get install -y postgresql-client postgresql-contrib && \
-    apt-get clean
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
 USER webapp
 
