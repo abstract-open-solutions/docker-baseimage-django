@@ -26,7 +26,7 @@ case $1 in
         ;;
     *)
         if [ -f ./entrypoint-extras.sh ]; then
-            ./entrypoint-extras.sh
+            ./entrypoint-extras.sh $@
         else
             exec "$@"
         fi
